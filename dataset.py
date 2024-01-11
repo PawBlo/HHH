@@ -6,20 +6,20 @@ import numpy as np
 class Dataset():
     def __init__(self):
         self.volunteers = pd.DataFrame({
-            'Płeć': ['Kobieta'],
-            'Lokalizacja': ['Miasto1'],
-            'Rodzaj Pomocy': ['Zakupy'],
-            'Stopień Samodzielności': [50],
-            'język komunikacji' : ['polski'],
-            'dostępność' : [40] 
+            'gender': ['female'],
+            'location': ['Miasto1'],
+            'type_of_assistance': ['shopping'],
+            'degree_of_independence': [50],
+            'communication_language' : ['polish'],
+            'availability' : [40] 
             })
         self.persons_in_need = pd.DataFrame({
-        'Płeć': ['Mężczyzna', 'Kobieta'],
-        'Lokalizacja': ['Miasto1', 'Miasto2'],
-        'Rodzaj Pomocy': ['Zakupy', 'Sprzątanie'],
-        'Stopień Samodzielności': [30, 70],
-        'Język komunikacji' : ['polski', 'angielski'],
-        'dostępność' : [20, 40]
+        'gender': ['male', 'female'],
+        'location': ['Miasto1', 'Miasto2'],
+        'type_of_assistance': ['shopping', 'cleaning '],
+        'degree_of_independence': [30, 70],
+        'communication_language' : ['polish', 'english'],
+        'availability' : [20, 40]
         # ... inne pola
         })
         self.coordinates_of_cities = {
@@ -27,15 +27,15 @@ class Dataset():
             'Miasto2': (53.1514500,  16.7378200),  # Katowice
         }
         self.personal_info_persons = {
-            "1":{'imię' : "Jan", "wiek" : 80, "opis" : """Pan Jan jest żołnierzem w stanie spoczynku. Został ranny podcza
+            "1":{'name' : "Jan", "age" : 80, "description" : """Pan Jan jest żołnierzem w stanie spoczynku. Został ranny podcza
                       a misji w Czechosłowacji. Ma problemy z lewą nogą i pomocy z zrobieniem
                       zakupów. Jest kochającym dziadkiem."""},
-            "2" : {'imię' :  "Kazimierz", 'wiek':82, "opis":"""Pan Kazimierz jest emerytowanym kolejrarzem. Przepracował na kolei ponad
-                        40 lat. Ma problemy z kręgosłupem i potrzebuje pomocy ze sprzątaniem."""}}
+            "2" : {'name' :  "Kazimierz", 'age':82, "description":"""Pan Kazimierz jest emerytowanym kolejrarzem. Przepracował na kolei ponad
+                        40 lat. Ma problemy z kręgosłupem i potrzebuje pomocy ze cleaning m."""}}
         self.personal_info_volunteers = {
-            'imię' : "Asia",
-            'wiek' : 22,
-            'opis' : """W wolnym czasie Asia uwielbia czytać książki, uprawiać jogę 
+            'name' : "Asia",
+            'age' : 22,
+            'description' : """W wolnym czasie Asia uwielbia czytać książki, uprawiać jogę 
             oraz eksplorować nowe miejsca. Jej zainteresowania pozwalają jej łatwo nawiązywać
               kontakt z różnymi osobami. Zawsze gotowa do pomocy,
                 Asia jest szczególnie zainteresowana działaniami związanymi z opieką 
