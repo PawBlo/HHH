@@ -7,7 +7,7 @@ class Dataset():
     def __init__(self):
         self.volunteers = pd.DataFrame({
             'gender': ['female'],
-            'location': ['Miasto1'],
+            'location': ['Poznań'],
             'type_of_assistance': [['shopping']],
             'degree_of_independence': [50],
             'communication_language' : [['polish']],
