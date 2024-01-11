@@ -21,6 +21,13 @@ def predict():
     dataset = Dataset()
     person_data = dataset.get_persons()
     volunteer_data = dataset.get_volunteers()
+    for key in ['gender', 'type_of_assistance', 'communication_language','hobby'  ]:
+        for i in range(len(person_data[key])):
+            person_data[key][i] = person_data[key][i][0]
+
+    for key in ['gender', 'type_of_assistance', 'communication_language','hobby'  ]:
+        for i in range(len(volunteer_data[key])):
+            volunteer_data[key][i] = volunteer_data[key][i][0]
     person_data['Odległość od Wolontariusza'] = person_data.apply(
         lambda row: calculate_distance(volunteer_data.iloc[0], row, dataset.get_coordinates_of_cities()), axis=1)
     scaler = MinMaxScaler()
@@ -39,3 +46,4 @@ def predict():
     encoded_persons = encoded_data[:-1]
     similarity_scores = cosine_similarity(encoded_volunteers, encoded_persons)
     return similarity_scores
+predict()
