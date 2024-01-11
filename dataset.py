@@ -8,18 +8,22 @@ class Dataset():
         self.volunteers = pd.DataFrame({
             'gender': ['female'],
             'location': ['Miasto1'],
-            'type_of_assistance': ['shopping'],
+            'type_of_assistance': [['shopping']],
             'degree_of_independence': [50],
             'communication_language' : [['polish']],
-            'availability' : [40] 
+            'availability' : [40],
+            'hobby' : [['chess']],
+            'coordinates_of_city' : [(52.40692, 16.92993)] 
             })
         self.persons_in_need = pd.DataFrame({
         'gender': ['male', 'female'],
         'location': ['Miasto1', 'Miasto2'],
-        'type_of_assistance': ['shopping', 'cleaning '],
+        'type_of_assistance': [['shopping'], ['cleaning ']],
         'degree_of_independence': [30, 70],
         'communication_language' : [['polish'], ['english']],
-        'availability' : [20, 40]
+        'availability' : [20, 40],
+        'hobby': [['chess'], ['netflix']],
+        'coordinates_of_city' :[(52.40692, 16.92993),(53.1514500,  16.7378200) ]
         # ... inne pola
         })
         self.coordinates_of_cities = {
