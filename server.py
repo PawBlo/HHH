@@ -11,7 +11,22 @@ from recommendation_system import predict
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 import random
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
+
+origins = [
+    "http://localhost:4200",  # Adres frontendu
+    # Możesz dodać więcej adresów, jeśli potrzebujesz
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],  # Dopuszcza wszystkie metody (GET, POST, etc.)
+    allow_headers=["*"],  # Dopuszcza wszystkie nagłówki
+)
+
 @app.get("/persons")
 def get_persons():
     dataset = Dataset()
