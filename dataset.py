@@ -32,7 +32,10 @@ class Dataset():
 ["eating", "dressing"],
 ["speech therapy", "physical exercises"],
 ["reading", "household tasks"],
-["basic skills training", "constant care"]],
+["basic skills training", "constant care"],
+["eating", "dressing"],
+["daily routines", "reading"]
+],
         'degree_of_independence': [30, 70,30, 40, 50, 35, 25, 60, 45, 30, 55, 50, 20, 40, 65, 50, 10],
         'communication_language' : [['polish'], ['english'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish']],
         'availability' : [20, 40, 35, 30, 15, 25, 45, 50, 55, 60, 65, 70, 75, 80, 85, 12, 28]
