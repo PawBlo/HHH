@@ -31,19 +31,32 @@ class Dataset():
             'Miasto2': (53.1514500,  16.7378200),  # Katowice
         }
         self.personal_info_persons = {
-            "1":{'name' : "Jan", "age" : 80, "description" : """Pan Jan jest żołnierzem w stanie spoczynku. Został ranny podcza
-                      a misji w Czechosłowacji. Ma problemy z lewą nogą i pomocy z zrobieniem
-                      zakupów. Jest kochającym dziadkiem."""},
-            "2" : {'name' :  "Kazimierz", 'age':82, "description":"""Pan Kazimierz jest emerytowanym kolejrarzem. Przepracował na kolei ponad
-                        40 lat. Ma problemy z kręgosłupem i potrzebuje pomocy ze cleaning m."""}}
+            "1":{'name' : "Jan", "age" : 80, "description" : """Mr. Jan is a retired soldier. He was injured during a mission in Czechoslovakia.
+                  He has problems with his left leg and needs help with shopping. He is a loving grandfather."""},
+            "2" : {'name' :  "Kazimierz", 'age':82, "description":"""Mr. Kazimierz is a retired railwayman.
+                    He worked on the railway for over 40 years. He has back problems and needs help with cleaning."""},
+    "3":{"name": "Katarzyna", "age": 72, "description": "Katarzyna is a former teacher who struggles with vision problems. She has dedicated her life to education and now needs assistance in reading and writing correspondence. Katarzyna enjoys gardening but requires help in maintaining her garden. She has a deep love for classical music."},
+    "4":{"name": "Piotr", "age": 68, "description": "Piotr is a retired mechanic who suffers from arthritis. He spent years fixing cars and now finds it hard to manage household repairs. Piotr needs help with daily chores and is passionate about model trains."},
+    "5" :{"name": "Agnieszka", "age": 35, "description": "Agnieszka is a single mother battling a chronic illness. She struggles to balance her health needs with caring for her two young children. Agnieszka needs assistance with daily household tasks and transportation to medical appointments."},
+    "6": {"name": "Marek", "age": 79, "description": "Marek is an elderly widower who lives alone. He has mobility issues due to a recent hip surgery. Marek loves cooking but now needs help with grocery shopping and meal preparation. He is an avid bird watcher."},
+    "7":{"name": "Zofia", "age": 76, "description": "Zofia is a former librarian with early-stage Alzheimer's. She needs assistance with daily routines and enjoys reminiscing about her days among books. Zofia loves poetry and needs someone to read to her."},
+    "8":{"name": "Tomasz", "age": 24, "description": "Tomasz is a young adult with autism. He is highly skilled in computers but struggles with social interactions. Tomasz needs support in developing social skills and pursuing employment opportunities."},
+    "9":{"name": "Magdalena", "age": 50, "description": "Magdalena is a cancer survivor who experiences fatigue and physical limitations. She is an artist who now requires help in setting up and organizing her studio. Magdalena is passionate about painting landscapes."},
+    "10":{"name": "Stefan", "age": 65, "description": "Stefan is a veteran who suffers from PTSD. He needs support in managing his daily life and attending therapy sessions. Stefan has a keen interest in history and enjoys visiting museums."},
+    "11":{"name": "Dorota", "age": 70, "description": "Dorota is a retired nurse with severe rheumatoid arthritis. She spent her life caring for others and now needs care herself. Dorota loves knitting and requires assistance in managing her home."},
+    "12":{"name": "Andrzej", "age": 58, "description": "Andrzej is a former construction worker who suffered a severe back injury. He needs help with mobility and daily activities. Andrzej is a fan of classic rock music and plays the guitar."},
+    "13":{"name": "Helena", "age": 81, "description": "Helena is a retired school principal who has lost much of her hearing. She needs assistance with communication and enjoys attending local theater productions. Helena is active in her community and loves mentoring young people."},
+    "14":{"name": "Wojciech", "age": 77, "description": "Wojciech is an elderly man with Parkinson's disease. He struggles with tremors and needs help with eating and dressing. Wojciech is a former chess champion and enjoys playing chess with visitors."},
+    "15":{"name": "Ewa", "age": 62, "description": "Ewa is a middle-aged woman recovering from a stroke. She requires help with speech therapy and physical exercises. Ewa is an avid gardener and bird enthusiast."},
+    "16":{"name": "Krystyna", "age": 69, "description": "Krystyna is a retired seamstress with failing eyesight. She needs help with reading and household tasks. Krystyna enjoys listening to radio dramas and has a vast collection of vintage clothing."},
+    "17":{"name": "Michał", "age": 30, "description": "Michał is a young man who suffered a traumatic brain injury in an accident. He is relearning basic skills and needs constant care and support. Michał is passionate about sports and enjoys watching soccer matches."}}
         self.personal_info_volunteers = {
             'name' : "Asia",
             'age' : 22,
-            'description' : """W wolnym czasie Asia uwielbia czytać książki, uprawiać jogę 
-            oraz eksplorować nowe miejsca. Jej zainteresowania pozwalają jej łatwo nawiązywać
-              kontakt z różnymi osobami. Zawsze gotowa do pomocy,
-                Asia jest szczególnie zainteresowana działaniami związanymi z opieką 
-                nad seniorami, ale także chętnie angażuje się w pomoc dzieciom i młodzieży."""
+            'description' : """In her free time, Asia loves to read books, practice yoga,
+              and explore new places. Her interests make it easy for her to connect with various people.
+                Always ready to help, Asia is particularly interested in activities related to caring for the elderly, 
+                but she is also eager to engage in helping children and youth."""
         }
     def get_persons(self):
         return self.persons_in_need
