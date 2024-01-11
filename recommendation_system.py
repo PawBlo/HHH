@@ -21,15 +21,18 @@ def predict():
     dataset = Dataset()
     person_data = dataset.get_persons()
     volunteer_data = dataset.get_volunteers()
-    for key in ['gender', 'type_of_assistance', 'communication_language','hobby'  ]:
-        for i in range(len(person_data[key])):
-            person_data[key][i] = person_data[key][i][0]
+    # for key in ['gender', 'type_of_assistance', 'communication_language','hobby'  ]:
+    #     for i in range(len(person_data[key])):
+    #         person_data[key][i] = person_data[key][i][0]
 
     for key in ['gender', 'type_of_assistance', 'communication_language','hobby'  ]:
         for i in range(len(volunteer_data[key])):
             volunteer_data[key][i] = volunteer_data[key][i][0]
     person_data['Odległość od Wolontariusza'] = person_data.apply(
         lambda row: calculate_distance(volunteer_data.iloc[0], row, dataset.get_coordinates_of_cities()), axis=1)
+    for key in ['type_of_assistance', 'communication_language', 'hobby']:
+        person_data[key] = person_data[key].apply(lambda x: ', '.join(x[0]) if x else '')
+        volunteer_data[key] = volunteer_data[key].apply(lambda x: ', '.join(x[0]) if x else '')
     scaler = MinMaxScaler()
     encoder = OneHotEncoder()
     person_data[['degree_of_independence']] = scaler.fit_transform(person_data[['degree_of_independence']])
