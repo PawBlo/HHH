@@ -10,7 +10,7 @@ class Dataset():
             'location': ['Miasto1'],
             'type_of_assistance': ['shopping'],
             'degree_of_independence': [50],
-            'communication_language' : ['polish'],
+            'communication_language' : [['polish']],
             'availability' : [40] 
             })
         self.persons_in_need = pd.DataFrame({
@@ -18,7 +18,7 @@ class Dataset():
         'location': ['Miasto1', 'Miasto2'],
         'type_of_assistance': ['shopping', 'cleaning '],
         'degree_of_independence': [30, 70],
-        'communication_language' : ['polish', 'english'],
+        'communication_language' : [['polish'], ['english']],
         'availability' : [20, 40]
         # ... inne pola
         })
