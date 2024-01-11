@@ -47,9 +47,24 @@ class Dataset():
         # ... inne pola
         })
         self.coordinates_of_cities = {
-            'Miasto1': (52.40692, 16.92993),  # Warszawa
-            'Miasto2': (53.1514500,  16.7378200),  # Katowice
-        }
+    "Piła": (53.1514500, 16.7378200), # przykładowe współrzędne dla Piły
+    "Luboń": (52.3472900, 16.8817800), # przykładowe współrzędne dla Lubonia
+    "Poznań": (52.40692, 16.92993),
+    "Wrocław": (51.107883, 17.038538),
+    "Szczecin": (53.428543, 14.552812),
+    "Kraków": (50.064651, 19.944981),
+    "Gdańsk": (54.352025, 18.646639),
+    "Łódź": (51.759249, 19.455983),
+    "Warszawa": (52.229676, 21.012229),
+    "Bydgoszcz": (53.123482, 18.008438),
+    "Lublin": (51.246454, 22.568446),
+    "Katowice": (50.270908, 19.039993),
+    "Białystok": (53.132489, 23.168840),
+    "Rzeszów": (50.041187, 21.999121),
+    "Kielce": (50.866077, 20.628569),
+    "Olsztyn": (53.770226, 20.490189),
+    "Zielona Góra": (51.935621, 15.506186)
+}
         self.personal_info_persons = {
             "1":{'name' : "Jan", "age" : 80, "description" : """Mr. Jan is a retired soldier. He was injured during a mission in Czechoslovakia.
                   He has problems with his left leg and needs help with shopping. He is a loving grandfather."""},
