@@ -10,6 +10,7 @@ from dataset import Dataset
 from recommendation_system import predict
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
+import random
 app = FastAPI()
 @app.get("/persons")
 def get_persons():
@@ -33,8 +34,11 @@ def get_volunteers():
     return volunteers
 @app.get("/predict")
 def get_predict():
-    pred = predict()
-    return dict(enumerate(pred.flatten(),1))
+    #pred = predict()
+    mock_result={}
+    for i in range(1,18):
+        mock_result[str(i)] = random.random()
+    return mock_result
 
 @app.get("/get-image-person/{image_id}")
 def get_image(image_id: int):

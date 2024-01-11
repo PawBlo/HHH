@@ -16,14 +16,31 @@ class Dataset():
             'coordinates_of_city' : [(52.40692, 16.92993)] 
             })
         self.persons_in_need = pd.DataFrame({
-        'gender': ['male', 'female'],
-        'location': ['Miasto1', 'Miasto2'],
-        'type_of_assistance': [['shopping'], ['cleaning ']],
-        'degree_of_independence': [30, 70],
-        'communication_language' : [['polish'], ['english']],
-        'availability' : [20, 40],
-        'hobby': [['chess'], ['netflix']],
-        'coordinates_of_city' :[(52.40692, 16.92993),(53.1514500,  16.7378200) ]
+        'gender': ['male', 'male', 'female', 'male', 'female', 'male', 'female', 'male', 'female', 'male', 'female', 'male', 'female', 'male','female','female', 'male'],
+        'location': ["Piła", "Luboń","Poznań","Wrocław","Szczecin","Kraków","Gdańsk","Łódź","Warszawa","Bydgoszcz","Lublin","Katowice","Białystok","Rzeszów","Kielce","Olsztyn","Zielona Góra"],
+        'type_of_assistance': [["reading", "writing", "gardening"],
+["daily chores", "household repairs"],
+["household tasks", "transportation"],
+["grocery shopping", "meal preparation"],
+["daily routines", "reading"],
+["social skills", "employment support"],
+["studio organization", "physical assistance"],
+["daily life management", "therapy support"],
+["home management", "knitting"],
+["mobility", "daily activities"],
+["communication", "community involvement"],
+["eating", "dressing"],
+["speech therapy", "physical exercises"],
+["reading", "household tasks"],
+["basic skills training", "constant care"]],
+        'degree_of_independence': [30, 70,30, 40, 50, 35, 25, 60, 45, 30, 55, 50, 20, 40, 65, 50, 10],
+        'communication_language' : [['polish'], ['english'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish'],['polish']],
+        'availability' : [20, 40, 35, 30, 15, 25, 45, 50, 55, 60, 65, 70, 75, 80, 85, 12, 28]
+,
+        'hobby': [["gardening"], ["model trains"], ["knitting"], ["cooking"], ["poetry"], ["computers"], ["painting"], ["history"], ["knitting"], ["music"], ["theater"], ["chess"], ["gardening"], ["radio dramas"], ["sports"], ["radio dramas"],["knitting"]],
+        'coordinates_of_city' :[(52.40692, 16.92993), (51.107883, 17.038538), (53.428543, 14.552812), (50.064651, 19.944981), (54.352025, 18.646639),
+                                 (51.759249, 19.455983), (52.229676, 21.012229), (53.123482, 18.008438), (51.246454, 22.568446), (50.270908, 19.039993), 
+                                 (53.132489, 23.168840), (50.041187, 21.999121), (50.866077, 20.628569), (53.770226, 20.490189), (51.935621, 15.506186),  (53.770226, 20.490189), (51.935621, 15.506186) ]
         # ... inne pola
         })
         self.coordinates_of_cities = {
