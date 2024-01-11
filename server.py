@@ -53,7 +53,7 @@ def get_predict():
     # mock_result={}
     # for i in range(1,18):
     #     mock_result[str(i)] = random.random()
-    return {str(i+1): pred[i] for i in range(len(pred))}
+    return dict(enumerate(pred.flatten(),1))
 
 @app.get("/get-image-person/{image_id}")
 def get_image(image_id: int):
